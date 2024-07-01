@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Điển Đơn Giản</title>
+</head>
+<body>
+<h1>Từ Điển Anh - Việt</h1>
+<form id="dictionaryForm">
+    <label for="word">Nhập từ tiếng Anh:</label>
+    <input type="text" id="word" name="word" required>
+    <button type="submit">Tìm kiếm</button>
+</form>
+<p id="result"></p>
+
+<script>
+
+    let englishWords = ["hello", "world", "apple", "orange", "car", "house"];
+    let vietnameseWords = ["xin chào", "thế giới", "táo", "cam", "xe hơi", "nhà"];
+
+
+    let form = document.getElementById('dictionaryForm');
+    let result = document.getElementById('result');
+
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+
+        let word = document.getElementById('word').value.trim().toLowerCase();
+
+        let found = false;
+        for (let i = 0; i < englishWords.length; i++) {
+            if (englishWords[i] === word) {
+                result.textContent = "Nghĩa tiếng Việt: " + vietnameseWords[i];
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            result.textContent = "Không tìm thấy từ này trong từ điển.";
+        }
+    });
+
+</script>
+</body>
+</html>

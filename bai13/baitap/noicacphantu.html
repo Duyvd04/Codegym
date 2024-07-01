@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối phần từ</title>
+</head>
+<body>
+<script>
+    var input = "025468";
+    var result = "";
+
+    for (var i = 0; i < input.length; i++) {
+        result += input[i];
+        if (parseInt(input[i]) % 2 === 0 && parseInt(input[i + 1]) % 2 === 0) {
+            result += "-";
+        }
+    }
+
+    console.log(result);
+
+</script>
+</body>
+</html>

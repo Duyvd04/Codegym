@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hoa</title>
+</head>
+<body>
+<script>
+    var input = "The Quick Brown Fox";
+    var result = "";
+
+    for (var i = 0; i < input.length; i++) {
+        var char = input[i];
+        if (char === char.toLowerCase()) {
+            result += char.toUpperCase();
+        } else {
+            result += char.toLowerCase();
+        }
+    }
+
+    console.log(result);
+
+</script>
+</body>
+</html>
