@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên nhỏ nhất</title>
+</head>
+<body>
+<script>
+    function findMin(a, b, c) {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < a && b < c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+
+
+    const num1 = 10;
+    const num2 = 5;
+    const num3 = 8;
+
+    const minValue = findMin(num1, num2, num3);
+    console.log(`Số nguyên nhỏ nhất là: ${minValue}`);
+
+</script>
+</body>
+</html>
