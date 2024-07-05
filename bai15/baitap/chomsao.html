@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sao</title>
+</head>
+<body>
+<script>
+    const ngoiSao = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus"
+    ];
+
+    // Tạo mảng tên chòm sao tương ứng
+    const chomSao = [
+        "Ursa Minor",
+        "Taurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo"
+    ];
+    function timSao(starName) {
+        const index = ngoiSao.indexOf(starName);
+        if (index !== -1) {
+            return chomSao[index];
+        } else {
+            return "Không tìm thấy ngôi sao nào!";
+        }
+    }
+
+    const userInput = prompt("Nhập tên ngôi sao:");
+    const result = timSao(userInput);
+    alert(result);
+</script>
+</body>
+</html>
+
+
