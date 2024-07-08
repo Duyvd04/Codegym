@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #productForm {
+            margin: 20px 0;
+        }
+        #productForm input[type="text"] {
+            width: 70%;
+            padding: 10px;
+        }
+        #productForm input[type="submit"] {
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .btn {
+            padding: 5px 10px;
+            color: white;
+            background-color: green;
+            border: none;
+            cursor: pointer;
+        }
+        .btn.delete {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Product Management</h1>
+    <div id="productForm">
+        <input type="text" id="productName" placeholder="New Product">
+        <input type="submit" value="Add" onclick="addProduct()">
+    </div>
+    <table id="productTable">
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="productList">
+        <!-- Product rows will go here -->git
+        </tbody>
+    </table>
+</div>
+
+<script src="quanlysanpham.js"></script>
+</body>
+</html>
