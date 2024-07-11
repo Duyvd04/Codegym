@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+    <style>
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button onclick="showLove()">YES</button>
+<button id="noButton" onmouseover="moveNoButton()">NO</button>
+
+<script>
+    function showLove() {
+        alert("<3");
+    }
+
+    function moveNoButton() {
+        const noButton = document.getElementById("noButton");
+        const maxWidth = window.innerWidth - noButton.clientWidth;
+        const maxHeight = window.innerHeight - noButton.clientHeight;
+
+        const randomX = Math.random() * maxWidth;
+        const randomY = Math.random() * maxHeight;
+
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    }
+</script>
+</body>
+</html>
