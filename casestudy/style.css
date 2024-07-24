@@ -1,14 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.start, .pause {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start:hover, .pause:hover {
+    background-color: #0056b3;
+}
+
+.score {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
 .grid {
     width: 500px;
     height: 500px;
     display: flex;
     flex-wrap: wrap;
-    border-style: solid;
+    border: 2px solid #333;
+    margin: 0 auto;
+    background-color: white;
 }
 
 .grid div {
     width: 50px;
     height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
 }
 
 .snake {
@@ -22,4 +61,3 @@
 .big-apple {
     background-color: red;
 }
-
