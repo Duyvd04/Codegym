@@ -54,7 +54,7 @@ class SnakeGame {
     }
 
     moveOutcomes() {
-        // Check if the snake hits the wall or itself
+        
         if (
             (this.currentSnake[0] + this.width >= (this.width * this.width) && this.direction === this.width) ||
             (this.currentSnake[0] % this.width === this.width - 1 && this.direction === 1) ||
