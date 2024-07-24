@@ -54,7 +54,7 @@ class SnakeGame {
     }
 
     moveOutcomes() {
-
+        // Check if the snake hits the wall or itself
         if (
             (this.currentSnake[0] + this.width >= (this.width * this.width) && this.direction === this.width) ||
             (this.currentSnake[0] % this.width === this.width - 1 && this.direction === 1) ||
@@ -63,6 +63,8 @@ class SnakeGame {
             this.squares[this.currentSnake[0] + this.direction].classList.contains('snake')
         ) {
             cancelAnimationFrame(this.animationFrameId);
+            alert(`Game Over! Your final score is ${this.score}`);
+            this.startGame(); // Restart the game
             return;
         }
 
@@ -92,7 +94,6 @@ class SnakeGame {
 
             if (isBigApple) {
                 this.bigApple = false;
-                this.intervalTime /= this.speed;
                 this.score += 3;
             } else {
 
