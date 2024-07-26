@@ -64,7 +64,7 @@ class SnakeGame {
         ) {
             cancelAnimationFrame(this.animationFrameId);
             alert(`Game Over! Your final score is ${this.score}`);
-            this.startGame(); // Restart the game
+            this.startGame();
             return;
         }
 
