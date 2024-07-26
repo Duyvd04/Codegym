@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrimeNum(n) {
+        if (n < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function findPrimeNum(arr) {
+        const result = [];
+        for (let num of arr) {
+            if (checkPrimeNum(num)) {
+                result.push(num);
+            }
+        }
+        return result.sort((a, b) => a - b);
+    }
+
+    const arr1 = [2, 103, 7, 5, 199, 11, 3, 13, 4, 17, 43];
+    const result = findPrimeNum(arr1);
+
+    console.log("Mảng số nguyên tố sắp xếp tăng dần:", result);
+
+</script>
+</body>
+</html>

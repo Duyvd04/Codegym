@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(phoneCode, name, manufacturer, price) {
+            this.phoneCode = phoneCode;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.price = price;
+        }
+
+        toString() {
+            return `Code: ${this.phoneCode}, Name: ${this.name}, Manufacturer: ${this.manufacturer}, Price: ${this.price}`;
+        }
+    }
+
+
+    class PhoneManager {
+        constructor() {
+            this.phoneList = [];
+        }
+
+        addPhone(phone) {
+            this.phoneList.push(phone);
+        }
+
+        displayPhones() {
+            for (let i = 0; i < this.phoneList.length; i++) {
+                console.log(this.phoneList[i].toString());
+            }
+        }
+    }
+
+
+    const phoneManager = new PhoneManager();
+    phoneManager.addPhone(new Phone("A", "iPhone", "Apple", 100));
+    phoneManager.addPhone(new Phone("B", "Galaxy", "Samsung", 200));
+
+    console.log("Phone list: ");
+    phoneManager.displayPhones();
+</script>
+</body>
+</html>

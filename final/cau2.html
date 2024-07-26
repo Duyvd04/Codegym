@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countUpperCaseChars(str) {
+        let upperCaseCount = 0;
+
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i];
+
+            if (char >= 'A' && char <= 'Z') {
+                upperCaseCount++;
+            }
+        }
+
+        if (upperCaseCount > 0) {
+            return upperCaseCount;
+        } else {
+            return "The String is not contain upper char";
+        }
+    }
+
+    let userInput = prompt("Please enter a string:");
+
+    let result = countUpperCaseChars(userInput);
+    alert(result);
+
+</script>
+</body>
+</html>
