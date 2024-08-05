@@ -16,8 +16,8 @@ public class Interest {
         System.out.println("Enter the month: ");
         month = scanner.nextFloat();
 
-        for(int i = 0; i < month; i++){
-            totalInterest += money * (interestRate/100)/12 * month;
+        for (int i = 0; i < month; i++) {
+            totalInterest += money * (interestRate / 100) / 12 * month;
         }
         System.out.println("Total of interest: " + totalInterest);
     }
