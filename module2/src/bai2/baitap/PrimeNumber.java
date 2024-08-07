@@ -7,8 +7,8 @@ public class PrimeNumber {
 
         int numbers = 20;
 
-        int count = 0; // Đếm số lượng số nguyên tố đã hiển thị
-        int N = 2; // Giá trị ban đầu để kiểm tra
+        int count = 0;
+        int N = 2;
 
         while (count < numbers) {
             if (isPrime(N)) {
@@ -21,7 +21,6 @@ public class PrimeNumber {
 
     }
 
-    // Phương thức kiểm tra xem một số có phải là số nguyên tố hay không
     public static boolean isPrime(int num) {
         if (num < 2) {
             return false;
