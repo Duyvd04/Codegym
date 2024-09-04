@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class ManagementTest {
     public static void main(String[] args) {
-        // Khởi tạo đối tượng Repository và Service
         StudentRepo studentRepo = new StudentRepo();
         StudentService studentService = new StudentService(studentRepo);
         StudentController studentController = new StudentController(studentService);
@@ -71,7 +70,7 @@ public class ManagementTest {
                     String studentName = scanner.nextLine();
                     System.out.print("Nhập tuổi học sinh: ");
                     int studentAge = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline left-over
+                    scanner.nextLine();
                     System.out.print("Nhập lớp học sinh: ");
                     String studentClass = scanner.nextLine();
 
@@ -86,7 +85,7 @@ public class ManagementTest {
                     String teacherName = scanner.nextLine();
                     System.out.print("Nhập tuổi giáo viên: ");
                     int teacherAge = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline left-over
+                    scanner.nextLine();
                     System.out.print("Nhập môn dạy giáo viên: ");
                     String teacherSubject = scanner.nextLine();
 
